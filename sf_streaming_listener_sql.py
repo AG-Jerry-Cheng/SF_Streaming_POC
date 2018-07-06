@@ -96,9 +96,9 @@ def up_insert_del_data_to_dms(event_type, msg_dict):
     env = environments.get('STG')
     with SSHTunnelForwarder(
             ssh_address_or_host=('staging-jumpbox.autogravity.com', 22),
-            ssh_username="jerry",
+            ssh_username="put your username",
             ssh_password="",
-            ssh_pkey="/Users/jerrycheng/.ssh/id_rsa",
+            ssh_pkey="put your ssh key",
             remote_bind_address=(env.get('host'), 3306)
     ) as server:
         DmsDataProcess()
